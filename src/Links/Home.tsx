@@ -108,7 +108,7 @@ const Home: React.FC = () => {
 
           <Col md={4} className="mb-4">
             <div style={{ borderLeft: '2px solid #222', paddingLeft: '20px' }}>
-              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2012 — 2018</p>
+              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2012 — 2019</p>
               <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '4px' }}>Pacday Elementary School</p>
               <p style={{ color: '#555', fontSize: '0.85rem', marginBottom: '0' }}>Primary Education</p>
             </div>
