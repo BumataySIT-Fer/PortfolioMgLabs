@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button, Card, Badge, Alert } from 'react-boo
 // Change these to whatever you want
 const ADMIN_USERNAME = 'admin';
 const ADMIN_PASSWORD = 'admin123';
+const PURPLE = '#a855f7';
 
 interface Message {
   _id: string;
@@ -53,7 +54,7 @@ const fetchMessages = async () => {
           <Row className="justify-content-center">
             <Col md={4}>
               <div className="border border-secondary rounded p-4 bg-black">
-                <h4 className="text-warning fw-bold mb-4">ADMIN LOGIN</h4>
+                <h4 style={{ color: PURPLE }} className="fw-bold mb-4">ADMIN LOGIN</h4>
 
                 {loginError && <Alert variant="danger" style={{ fontSize: '0.9rem' }}>{loginError}</Alert>}
 
@@ -80,7 +81,7 @@ const fetchMessages = async () => {
                     />
                   </Form.Group>
 
-                  <Button variant="warning" type="submit" className="w-100 fw-bold">
+                  <Button type="submit" className="w-100 fw-bold" style={{ backgroundColor: PURPLE, border: 'none' }}>
                     Login
                   </Button>
                 </Form>
@@ -101,7 +102,7 @@ const fetchMessages = async () => {
         <Row className="mb-5 mt-5">
           <Col>
             <h1 className="fw-bold display-5">
-              ADMIN <span className="text-warning">DASHBOARD</span>
+              ADMIN <span style={{ color: PURPLE }}>DASHBOARD</span>
             </h1>
             
           </Col>
@@ -116,7 +117,7 @@ const fetchMessages = async () => {
         <Row>
           <Col xs={12}>
             <h5 className="text-secondary mb-3">
-              Messages <Badge bg="warning" text="dark">{messages.length}</Badge>
+              Messages <Badge style={{ backgroundColor: PURPLE }}>{messages.length}</Badge>
             </h5>
           </Col>
 
@@ -127,11 +128,14 @@ const fetchMessages = async () => {
           ) : (
             messages.map((msg) => (
               <Col key={msg._id} md={6} className="mb-4">
-                <Card className="bg-black border border-secondary h-100">
+                <Card className="bg-black border border-secondary h-100"style={{ transition: 'border-color 0.2s' }}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = PURPLE)}
+                 onMouseLeave={e => (e.currentTarget.style.borderColor = '')}>
+                  
                   <Card.Body>
                     <div className="d-flex justify-content-between align-items-start">
                       <div>
-                        <Card.Title className="text-warning mb-0">{msg.name}</Card.Title>
+                        <Card.Title style={{ color: PURPLE }} className="mb-0">{msg.name}</Card.Title>
                         <small className="text-secondary">{msg.email}</small>
                       </div>
                       <small className="text-secondary">

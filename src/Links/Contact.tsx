@@ -8,6 +8,26 @@ type FormData = {
   message: string;
 };
 
+const PINK = 'rgb(255, 0, 170)';
+
+const socials = [
+  {
+    name: "Instagram",
+    url: "https://instagram.com",
+    img: "https://img.icons8.com/ios/50/ffffff/instagram-new.png",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/public-profile/settings/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BWqCYe%2Bu6TIetfs%2FeU44Gbw%3D%3D",
+    img: "https://img.icons8.com/ios/50/ffffff/linkedin.png",
+  },
+  {
+    name: "Facebook",
+    url: "https://facebook.com",
+    img: "https://img.icons8.com/ios/50/ffffff/facebook.png",
+  },
+];
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -61,7 +81,6 @@ const Contact: React.FC = () => {
         import.meta.env.VITE_EMAIL_PUBLIC_KEY
       );
 
-      // Save to MongoDB for admin page
       await fetch("https://portfoliofinals-production.up.railway.app/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -92,17 +111,19 @@ const Contact: React.FC = () => {
         {/* Header */}
         <Row className="mb-5 mt-5 text-center">
           <Col>
-            <h1 className="fw-bold display-5">
-              CONTACT <span className="text-warning">ME</span>
-            </h1>
+              <h1 className="fw-bold display-5">
+               CONTACT <span style={{ color: 'rgb(255, 255, 255)' }}>ME</span>
+              </h1>
           </Col>
         </Row>
 
         {/* Form */}
         <Row className="justify-content-center">
           <Col md={7}>
-            <div className="border border-secondary rounded p-4 bg-black">
-
+            <div
+              className="rounded p-4 bg-black"
+              style={{ border: '1px solid #444' }}
+            >
               {status && (
                 <Alert variant={isError ? "danger" : "success"}>
                   {status}
@@ -148,15 +169,75 @@ const Contact: React.FC = () => {
                 </Form.Group>
 
                 <Button
-                  variant="warning"
-                  type="submit"
-                  className="w-100 fw-bold"
-                  disabled={loading}
+                 variant="light"
+                 type="submit"
+                 className="w-100 fw-bold"
+                disabled={loading}
                 >
-                  {loading ? "Sending..." : "Send Message"}
+                 {loading ? "Sending..." : "Send Message"}
                 </Button>
               </Form>
+            </div>
+          </Col>
+        </Row>
 
+        {/* Social Links */}
+        <Row className="justify-content-center mt-5">
+          <Col md={7}>
+            <div
+              className="rounded p-4 bg-black text-center"
+              style={{ border: '1px solid #444' }}
+            >
+              <p className="text-secondary mb-4" style={{ fontSize: '0.85rem', letterSpacing: '2px' }}>
+                FIND ME ON
+              </p>
+              <div className="d-flex justify-content-center" style={{ gap: '32px' }}>
+                {socials.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: 'none' }}
+                  >
+                    <div
+                      className="d-flex flex-column align-items-center"
+                      style={{ gap: '8px', cursor: 'pointer' }}
+                    >
+                      <div
+                        style={{
+                          width: '52px',
+                          height: '52px',
+                          borderRadius: '50%',
+                          border: `1px solid #444`,
+                          backgroundColor: '#111',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          transition: 'border-color 0.2s, background-color 0.2s',
+                        }}
+                        onMouseEnter={e => {
+                          (e.currentTarget as HTMLDivElement).style.borderColor = PINK;
+                          (e.currentTarget as HTMLDivElement).style.backgroundColor = '#1a001a';
+                        }}
+                        onMouseLeave={e => {
+                          (e.currentTarget as HTMLDivElement).style.borderColor = '#444';
+                          (e.currentTarget as HTMLDivElement).style.backgroundColor = '#111';
+                        }}
+                      >
+                        <img
+                          src={social.img}
+                          alt={social.name}
+                          style={{ width: '24px', height: '24px', objectFit: 'contain' }}
+                        />
+                      </div>
+                      <span style={{ fontSize: '0.75rem', color: '#aaa' }}>
+                        {social.name}
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </Col>
         </Row>

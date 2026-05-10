@@ -33,7 +33,7 @@ const Projects: React.FC = () => {
          <Row className="mb-5 mt-5">
           <Col>
             <h1 className="fw-bold display-5">
-              MY <span className="text-warning">SIMPLE PROJECTS</span>
+               MY <span style={{ color: 'rgb(255, 255, 255)' }}>SIMPLE PROJECTS</span>
             </h1>
            
             <p className="text-secondary fs-5 mt-3">
@@ -49,7 +49,7 @@ const Projects: React.FC = () => {
               <Card
                 className="bg-black border border-secondary h-100"
                 style={{ transition: 'border-color 0.2s' }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = '#ffc107')}
+                onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgb(255, 255, 255)')}
                 onMouseLeave={e => (e.currentTarget.style.borderColor = '')}
               >
                 {/* Project Image */}
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 <Card.Body className="d-flex flex-column">
-                  <Card.Title className="text-warning fw-bold">{project.title}</Card.Title>
+                  <Card.Title style={{ color: 'rgb(255, 255, 255)' }} className="fw-bold">{project.title}</Card.Title>
                   <Card.Text className="text-secondary" style={{ fontSize: '0.9rem' }}>
                     {project.description}
                   </Card.Text>
@@ -78,20 +78,20 @@ const Projects: React.FC = () => {
                   {/* Buttons pushed to bottom */}
                   <div className="d-flex gap-2 mt-auto">
                     <Button
-                      variant="outline-warning"
+                      variant="outline-light"
                       size="sm"
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      GitHub
+                     GitHub
                     </Button>
                     <Button
-                      variant="warning"
-                      size="sm"
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                        variant="light"
+                        size="sm"
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
                     >
                       Live Demo
                     </Button>

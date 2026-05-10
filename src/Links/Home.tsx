@@ -1,14 +1,15 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import port from '../assets/port.jpg';
+
+import pro from '../assets/pro.png';
 
 
 const Home: React.FC = () => {
   return (
     <section 
       style={{ 
-        backgroundColor: '#111111', // Simple dark gray
+        backgroundColor: '#111111', 
         minHeight: '100vh', 
         color: 'white',
         display: 'flex',
@@ -20,7 +21,7 @@ const Home: React.FC = () => {
          
           <Col md={7}>
             <h1 style={{ fontWeight: 'bold', fontSize: '3rem' }}>
-              Hi, I'm <span style={{ color: '#ffcc00' }}>Bumatay Fernando</span>
+              Hi, I'm <span style={{ color: 'rgb(255, 255, 255)' }}>Bumatay Fernando</span>
             </h1>
             
             <p style={{ fontSize: '1.2rem', marginTop: '20px', color: '#cccccc' }}>
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
                 as={Link as any} 
                 to="/about" 
                 style={{ 
-                  backgroundColor: '#ffcc00', 
+                  backgroundColor: 'rgb(255, 255, 255)', 
                   color: 'black', 
                   border: 'none',
                   marginRight: '10px',
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
               style={{ 
                 width: '300px', 
                 height: '300px', 
-                border: '5px solid #ffcc00', 
+                border: '5px solid rgb(91, 4, 150)', 
                 margin: '0 auto',
                 display: 'flex',
                 alignItems: 'center',
@@ -70,7 +71,7 @@ const Home: React.FC = () => {
             >
              
               <img 
-                src={port} 
+                src={pro} 
                 alt="Bumatay Fernando" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
               />
