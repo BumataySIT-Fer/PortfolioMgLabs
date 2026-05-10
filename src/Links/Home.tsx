@@ -87,7 +87,7 @@ const Home: React.FC = () => {
               </Col>
               <Col md={7}>
                 <p style={{ color: '#aaaaaa', lineHeight: '1.8', marginBottom: '0' }}>
-                  Managed end-to-end software procurement and installation for diverse clients,
+                  Managed end to end software procurement and installation for diverse clients,
                   ensuring all applications were properly configured and optimized for performance.
                 </p>
               </Col>
@@ -108,7 +108,7 @@ const Home: React.FC = () => {
 
           <Col md={4} className="mb-4">
             <div style={{ borderLeft: '2px solid #222', paddingLeft: '20px' }}>
-              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2009 — 2015</p>
+              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2012 — 2018</p>
               <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '4px' }}>Pacday Elementary School</p>
               <p style={{ color: '#555', fontSize: '0.85rem', marginBottom: '0' }}>Primary Education</p>
             </div>
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
 
           <Col md={4} className="mb-4">
             <div style={{ borderLeft: '2px solid #222', paddingLeft: '20px' }}>
-              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2015 — 2021</p>
+              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2019 — 2025</p>
               <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '4px' }}>Joaquin Smith National High School</p>
               <p style={{ color: '#555', fontSize: '0.85rem', marginBottom: '0' }}>TVL — Tourism</p>
             </div>
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
 
           <Col md={4} className="mb-4">
             <div style={{ borderLeft: '2px solid rgb(255, 255, 255)', paddingLeft: '20px' }}>
-              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2024 — Present</p>
+              <p style={{ color: '#555', fontSize: '0.8rem', marginBottom: '4px' }}>2025 — Present</p>
               <p style={{ color: 'white', fontWeight: 'bold', marginBottom: '4px' }}>University of Baguio</p>
               <p style={{ color: '#aaaaaa', fontSize: '0.85rem', marginBottom: '0' }}>BS Information Technology</p>
             </div>
