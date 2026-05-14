@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 import pro from '../assets/pro.png';
 
 const Home: React.FC = () => {
