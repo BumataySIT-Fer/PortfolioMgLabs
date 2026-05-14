@@ -96,31 +96,35 @@ function NavBar() {
               >
                 Home
               </Nav.Link>
+              
               <Nav.Link
                 as={NavLink}
-                to="/about"
+                to="/prelim"
                 className="nav-custom-link"
                 onClick={() => setExpanded(false)}
               >
-                About
-              </Nav.Link>
-              <Nav.Link
-                as={NavLink}
-                to="/project"
-                className="nav-custom-link"
-                onClick={() => setExpanded(false)}
-              >
-                Projects
+                Prelim
               </Nav.Link>
 
-              {/* Hire Me Button */}
-              <NavLink
-                to="/contact"
-                className="hire-btn ms-2"
+              <Nav.Link
+                as={NavLink}
+                to="/midterm"
+                className="nav-custom-link"
                 onClick={() => setExpanded(false)}
               >
-                Hire Me?
-              </NavLink>
+                Midterm
+              </Nav.Link>
+
+              <Nav.Link
+                as={NavLink}
+                to="/finals"
+                className="nav-custom-link"
+                onClick={() => setExpanded(false)}
+              >
+                Finals
+              </Nav.Link>
+
+              
             </Nav>
           </Navbar.Collapse>
         </Container>

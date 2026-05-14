@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import About from './Links/About';
-import Contact from './Links/Contact';
+
 import Home from './Links/Home';
-import Project from './Links/Project';
 import NavBar from './Links/Navbar';
-import Secret from './Links/Secret';
+import Prelim from './Links/Prelim';
+import Midterm from './Links/Midterm';
+import Finals from './Links/Finals';
+
 import './App.css';
 
 function App() {
@@ -14,10 +15,10 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/project" element={<Project/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/secret" element={<Secret/>}/>
+          <Route path="/prelim" element={<Prelim/>}/>
+          <Route path="/midterm" element={<Midterm/>}/>
+          <Route path="/finals" element={<Finals/>}/>
+          
         </Routes>
       </BrowserRouter>
     </>
